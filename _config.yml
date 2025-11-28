@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   Web for writing about some interesting technical research.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://javi-jimenez.github.io/"
+url: "https://blog.jimenezgomez.org/"
 
   #remote_theme: cotes2020/jekyll-theme-chirpy
   #plugins:
