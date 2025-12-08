@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Cargando...</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .post-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .post-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .post-content h1 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem 0;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .post-content h2 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .post-content h3 {
+            color: var(--text-color);
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .post-content p {
+            margin-bottom: 1rem;
+        }
+
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            box-shadow: var(--box-shadow);
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            background-color: var(--light-color);
+            padding: 1rem;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .post-content code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .post-content pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        .post-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .post-content th,
+        .post-content td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .post-content th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .post-content tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+        }
+
+        .error {
+            background-color: #ffeaa7;
+            color: #d63031;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .post-title {
+                font-size: 2rem;
+            }
+
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← Volver al Blog</a>
+
+    <div id="post-header" class="post-header">
+        <h1 id="post-title" class="post-title">Cargando...</h1>
+        <div id="post-meta" class="post-meta">
+            <span id="post-date">Fecha</span>
+            <span id="post-author">Autor</span>
+            <span id="post-reading-time">Tiempo de lectura</span>
+        </div>
+    </div>
+
+    <div id="post-content" class="post-content">
+        <div class="loading">Cargando contenido del post...</div>
+    </div>
+
+    <a href="../../index.html" class="back-button">← Volver al Blog</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <script>
+        // Configurar marked para procesar markdown
+        marked.setOptions({
+            highlight: function(code, lang) {
+                if (Prism.languages[lang]) {
+                    return Prism.highlight(code, Prism.languages[lang], lang);
+                } else {
+                    return code;
+                }
+            },
+            breaks: true,
+            gfm: true
+        });
+
+        // Cargar y procesar el markdown
+        async function loadPost() {
+            try {
+                const response = await fetch('./index.md');
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar el post');
+                }
+                
+                const markdown = await response.text();
+                processMarkdown(markdown);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('post-content').innerHTML = 
+                    '<div class="error">Error al cargar el post: ' + error.message + '</div>';
+            }
+        }
+
+        function processMarkdown(markdown) {
+            let frontmatter = {};
+            let content = markdown;
+            
+            // Extraer frontmatter si existe
+            if (markdown.startsWith('---')) {
+                const endFrontmatter = markdown.indexOf('---', 3);
+                if (endFrontmatter !== -1) {
+                    const frontmatterText = markdown.substring(3, endFrontmatter);
+                    content = markdown.substring(endFrontmatter + 3);
+                    
+                    // Parsear frontmatter
+                    frontmatterText.split('\n').forEach(line => {
+                        const match = line.match(/^([^:]+):\s*(.+)$/);
+                        if (match) {
+                            const key = match[1].trim();
+                            let value = match[2].trim();
+                            
+                            // Procesar arrays
+                            if (key === 'tags' || key === 'categories') {
+                                value = value.split(',').map(item => item.trim());
+                            }
+                            
+                            frontmatter[key] = value;
+                        }
+                    });
+                }
+            }
+            
+            // Actualizar metadatos de la página
+            updatePageMetadata(frontmatter);
+            
+            // Procesar contenido markdown
+            const htmlContent = marked.parse(content.trim());
+            document.getElementById('post-content').innerHTML = htmlContent;
+            
+            // Procesar imágenes para usar rutas relativas
+            processImages();
+        }
+
+        function updatePageMetadata(metadata) {
+            // Título de la página
+            const title = metadata.title || 'Post sin título';
+            document.title = title + ' - Mi Blog';
+            document.getElementById('page-title').textContent = title;
+            document.getElementById('post-title').textContent = title;
+            
+            // Metadatos del post
+            if (metadata.date) {
+                document.getElementById('post-date').textContent = formatDate(metadata.date);
+            }
+            
+            if (metadata.author) {
+                document.getElementById('post-author').textContent = `Por ${metadata.author}`;
+            }
+            
+            if (metadata.readingTime) {
+                document.getElementById('post-reading-time').textContent = metadata.readingTime;
+            }
+            
+            // Descripción para SEO
+            if (metadata.description) {
+                const metaDesc = document.createElement('meta');
+                metaDesc.name = 'description';
+                metaDesc.content = metadata.description;
+                document.head.appendChild(metaDesc);
+            }
+        }
+
+        function processImages() {
+            // Asegurar que las imágenes usen rutas correctas
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('http') && !src.startsWith('/')) {
+                    img.src = './' + src;
+                }
+            });
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('es-ES', options);
+        }
+
+        // Cargar el post cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', loadPost);
+    </script>
+</body>
+</html>
+

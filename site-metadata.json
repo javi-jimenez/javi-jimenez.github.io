@@ -1,0 +1,42 @@
+{
+  "site": {
+    "title": "Mi Blog Personal",
+    "description": "Blog sobre tecnología, programación y desarrollo web",
+    "url": "https://tudominio.com",
+    "language": "es",
+    "author": {
+      "name": "Tu Nombre",
+      "email": "tu@email.com",
+      "website": "https://tuwebsite.com",
+      "social": {
+        "twitter": "@tunombre",
+        "github": "tunombre",
+        "linkedin": "tunombre"
+      }
+    },
+    "sponsors": [
+      {
+        "name": "Patrocinador 1",
+        "url": "https://patrocinador1.com",
+        "logo": "/assets/images/sponsors/patrocinador1.png"
+      },
+      {
+        "name": "Patrocinador 2", 
+        "url": "https://patrocinador2.com",
+        "logo": "/assets/images/sponsors/patrocinador2.png"
+      }
+    ],
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tu Empresa o Marca",
+      "url": "https://tudominio.com",
+      "logo": "https://tudominio.com/assets/images/logo.png",
+      "sameAs": [
+        "https://twitter.com/tunombre",
+        "https://github.com/tunombre"
+      ]
+    }
+  }
+}
+

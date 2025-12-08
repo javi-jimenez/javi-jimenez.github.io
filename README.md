@@ -1,43 +1,76 @@
-# Chirpy Starter
+# Sitio Web de Posts Estático
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Un sitio web estático elegante para mostrar posts, inspirado en el repositorio de javi-jimenez/posts.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Características
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+- Diseño moderno y responsive
+- Grid de posts adaptable
+- Sistema de categorías y etiquetas
+- Efectos de hover en tarjetas
+- Código optimizado y semántico
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## Estructura
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+- `index.html` - Página principal
+- `posts/` - Directorio para posts individuales (futura expansión)
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+## Cómo usar
 
-## Usage
+1. Descarga todos los archivos
+2. Abre `index.html` en tu navegador
+3. Personaliza el contenido según tus necesidades
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+## Personalización
 
-## Contributing
+Puedes modificar fácilmente:
+- Colores cambiando las variables CSS en `:root`
+- Contenido editando el HTML
+- Estilos en la sección `<style>`
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+## Pasos
 
-## License
+Create a complete single-page application (SPA) that loads and displays posts dynamically.
+There will be only one file called index.html with all resources self-contained.
 
-This work is published under [MIT][mit] License.
+generate an index.html for a technical web site blog.
+it read posts list in the main page.
+the posts are in markdown format
+on click on one listed post, post is showed as generated html from the markdown.
+make a single page for all.
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+posts are inside the posts/ directory.
+the date preces the post directory name.
+posts are named as index.md inside each post directory.
+inside the post directory, there is an index.md file.
+index.md is the file that has to be rendered as the markdown post.
+posts directory name format for the date is: YYYY-MM-DD or YYYY-MM-DD-HH-MM-SS or any variant.
+the directory format can not include the HH-MM-SS or any of them.
+inside the post directory, posts are named as index.md.
+posts have a frontmatter that you do not have to show directly.
+there is no manual post listing.
+posts listing must be dynamic, allowing to add or remove posts and they are detected.
+
+images are in the same directory as the posts.
+the images link in the post is relative to the place where the file index.md is.
+
+show posts in a grid in the main page.
+the main page have to have a top frame with images from pleiades and andromeda.
+the background is lightly referring stars.
+
+handle cases where href is not a string.
+add date validation and fallback formatting
+
+in the post image preview, show as image the first image found in the post, if there are no images, show a random tech icon or emoji.
+if it is defined an image in the frontmatter as image preview for the post use it.
+
+parse markdown before showing the post preview in the main page.
+Show only parsed text in the post text preview field in the main page.
+
+do your own test before delivering the release to me.
+
+hardcoded parameters, must go in variables. See what is hardcoded and put it in parameters.
+
+The theme for the blog is: andromeda, pleyades, Spain, and Europe.
+
+Fetch the metadata from site-metadata.json.
