@@ -1,5 +1,7 @@
+---
+---
 /* Custom overrides for the site
-   - Use `author-photo` if present, otherwise fall back to `logo.png`
+   - Use `site.data.site-metadata` author.photo if present, otherwise fall back to logo
    - Make the avatar circular and cover the area
 */
 #sidebar #avatar {
@@ -8,10 +10,14 @@
   height: 6.5rem;
   overflow: hidden;
   border-radius: 50%;
-  background-image: url('/assets/img/author-photo.png'), url('/assets/img/logo.png');
+  /* prefer author photo, fallback to logo via site data */
+  background-image: url("{{ site.data.site-metadata.author.photo | default: '/assets/img/author-photo.png' }}"), url("{{ site.data.site-metadata.logo | default: '/assets/img/logo.png' }}");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  /* match theme avatar border */
+  box-shadow: var(--avatar-border-color, rgba(0,0,0,0.08)) 0 0 0 2px;
+  background-color: transparent;
 }
 
 @media (min-width: 576px) {
@@ -24,8 +30,6 @@
 #sidebar #avatar img {
   display: none; /* ensure theme img doesn't conflict */
 }
----
----
 
 /* Custom Fonts and Reset */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap');
