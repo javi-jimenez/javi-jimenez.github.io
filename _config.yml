@@ -1,0 +1,42 @@
+# Jekyll Configuration
+
+lang: en
+timezone: Europe/Madrid
+
+# Site settings
+theme: jekyll-theme-chirpy
+title: "Javi Jiménez personal blog"
+description: "Blog sobre tecnología y desarrollo"
+author:
+  name: "Javi Jiménez"
+url: "https://javi-jimenez.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+# Plugins (must be an array of gem names)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - ".github/"
+  - "node_modules/"
+  - "vendor/"
+  - "backup_custom/"
+  # Exclude legacy files that conflict with plugin-generated outputs
+  - "assets/feed.xml"
+
+# Pagination (used by the Chirpy theme)
+paginate: 10
+paginate_path: "/page:num"
+
+# If you have site metadata in `site-metadata.json` or `_data/`, you can
+# reference it in templates via `site.data` instead of duplicating values.
