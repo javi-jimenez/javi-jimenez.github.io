@@ -44,7 +44,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Francisco Javier Jimenez Gomez
-  email: example@domain.com # change to your email address
+  email: ximenez.francisco@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/lubok9 # change to your twitter homepage
@@ -52,6 +52,7 @@ social:
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/ximenezfrancisco
 
 google_site_verification: # fill in to your verification string
 
@@ -72,7 +73,8 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: light # [light|dark]
+# theme_mode: light # [light|dark]
+theme_mode: dark # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
