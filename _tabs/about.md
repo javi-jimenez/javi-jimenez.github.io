@@ -1,10 +1,15 @@
+---
+title: "About"
+layout: page
+permalink: /about/
+---
+
 Francisco Javier Jiménez Gómez
 
 Listado de recursos en red:
 
-- LinkedIn: [https://www.linkedin.com/in/ximenezfrancisco/](https://www.linkedin.com/in/ximenezfrancisco/)
-- Twitter: [https://twitter.com/Lubok9](https://twitter.com/Lubok9)
-- GitHub: [https://github.com/javi-jimenez](https://github.com/javi-jimenez)
-- Web: [https://blog.jimenezgomez.org/](https://blog.jimenezgomez.org/)
-- Artículos: [https://github.com/javi-jimenez/posts/](https://github.com/javi-jimenez/posts/) 
-
+- LinkedIn: https://www.linkedin.com/in/ximenezfrancisco/
+- Twitter: https://twitter.com/Lubok9
+- GitHub: https://github.com/javi-jimenez
+- Web: https://blog.jimenezgomez.org/
+- Artículos: https://github.com/javi-jimenez/posts/

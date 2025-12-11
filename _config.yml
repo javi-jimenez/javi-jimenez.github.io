@@ -4,7 +4,6 @@ lang: en
 timezone: Europe/Madrid
 
 # Site settings
-theme: jekyll-theme-chirpy
 title: "Javi Jiménez personal blog"
 description: "Blog sobre tecnología y desarrollo"
 author:
