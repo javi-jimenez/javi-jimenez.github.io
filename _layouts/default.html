@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <header class="site-header">
+      <div class="site-header-content">
+        <h1 class="site-title">
+          <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </h1>
+        <p class="site-description">{{ site.description | escape }}</p>
+      </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            Copyright &copy; {{ 'now' | date: "%Y" }} {{ site.author }}.
+        </div>
+    </footer>
+
+  </body>
+
+</html>
