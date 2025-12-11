@@ -1,43 +1,159 @@
-# Chirpy Starter
+# Javi Jiménez Personal Blog
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+A Jekyll-powered blog using the Chirpy theme, customized with a "Stellar" subtheme and hosted on GitHub Pages.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Features
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+- **Jekyll Static Site Generator** - Built for GitHub Pages
+- **Responsive Design** - Beautiful on all devices
+- **Dark Theme** - Modern space-inspired color scheme
+- **Markdown Posts** - Easy to write and maintain
+- **SEO Optimized** - Built-in Jekyll SEO tag support
+- **Automated Deployment** - GitHub Actions workflow included
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## Quick Start
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+### Local Development
+
+1. **Install Ruby** (3.2+ recommended)
+   - macOS: `brew install ruby`
+   - Ubuntu: `sudo apt-get install ruby-full`
+   - Windows: Download from [ruby-lang.org](https://www.ruby-lang.org)
+
+2. **Install dependencies**
+   ```bash
+   bundle install
+   ```
+
+3. **Serve locally**
+   ```bash
+   bundle exec jekyll serve
+   ```
+   Site will be available at `http://localhost:4000`
+
+### Creating Posts
+
+Posts go in the `_posts/` directory with the format: `YYYY-MM-DD-title.md`
+
+Example post structure:
+```markdown
+---
+layout: post
+title: "My First Post"
+date: 2025-12-08 10:30:00 +0100
+author: "Your Name"
+excerpt: "A brief description of your post"
+---
+
+Your content here...
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+### Configuration
 
-## Usage
+Most configuration is done in `_config.yml`. For theme-specific options like navigation and social links, refer to the Chirpy theme documentation.
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+## Directory Structure
 
-## Contributing
+```
+.
+├── _posts/              # Blog posts
+├── _layouts/            # Page templates
+├── assets/css/          # Stylesheets
+├── _config.yml          # Jekyll configuration
+├── Gemfile              # Ruby dependencies
+├── index.md             # Homepage
+└── README.md            # This file
+```
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+## Deployment
+
+The site automatically deploys to GitHub Pages when you push to the `main` branch. The GitHub Actions workflow (`.github/workflows/jekyll.yml`) handles the build and deployment.
+
+### Manual Deployment Steps
+
+1. Push changes to the `main` branch:
+   ```bash
+   git add .
+   git commit -m "Update content"
+   git push origin main
+   ```
+
+2. GitHub Actions will automatically:
+   - Build the Jekyll site
+   - Generate static HTML
+   - Deploy to GitHub Pages
+
+Your site will be live at: `https://javi-jimenez.github.io`
+
+## Customization
+
+### Styling
+
+Main styles are in `assets/css/style.css`. Key CSS variables:
+
+```css
+--color-primary: #8cc6ff      /* Blue */
+--color-secondary: #ffb087    /* Orange */
+--color-text: #f0f0f0         /* Light text */
+--color-background: #15152a   /* Dark blue background */
+```
+
+### Layouts
+
+- `_layouts/default.html` - Base layout with header/footer
+- `_layouts/home.html` - Homepage with post list
+- `_layouts/post.html` - Individual post pages
+
+## Troubleshooting
+
+### Build fails locally
+
+```bash
+# Update gems
+bundle update
+
+# Clear cache
+rm -rf .jekyll-cache/
+rm -rf _site/
+
+# Try again
+bundle exec jekyll serve
+```
+
+### Posts not showing up
+
+- Ensure filename format: `YYYY-MM-DD-title.md`
+- Check post has YAML front matter (between `---`)
+- Verify date is not in the future
+- Rebuild site with `bundle exec jekyll build`
 
 ## License
 
-This work is published under [MIT][mit] License.
+MIT License - Feel free to use this template for your own blog!
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+there is no manual post listing.
+posts listing must be dynamic, allowing to add or remove posts and they are detected.
+
+images are in the same directory as the posts.
+the images link in the post is relative to the place where the file index.md is.
+
+show posts in a grid in the main page.
+the main page have to have a top frame with images from pleiades and andromeda.
+the background is lightly referring stars.
+
+handle cases where href is not a string.
+add date validation and fallback formatting
+
+in the post image preview, show as image the first image found in the post, if there are no images, show a random tech icon or emoji.
+if it is defined an image in the frontmatter as image preview for the post use it.
+
+parse markdown before showing the post preview in the main page.
+Show only parsed text in the post text preview field in the main page.
+
+do your own test before delivering the release to me.
+
+hardcoded parameters, must go in variables. See what is hardcoded and put it in parameters.
+
+The theme for the blog is: andromeda, pleyades, Spain, and Europe.
+
+Fetch the metadata from site-metadata.json.
