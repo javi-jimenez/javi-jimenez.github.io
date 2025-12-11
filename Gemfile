@@ -8,7 +8,6 @@ gem "jekyll-feed"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "jekyll-postfiles"
-gem "jekyll-remote-theme"
 gem "jekyll-theme-chirpy", "~> 7.4.1"
 gem "jekyll-paginate"
 
