@@ -3,54 +3,15 @@ layout: default
 ---
 
 <div class="home">
-  <h2 class="post-list-heading">Latest Posts</h2>
-
-  <div class="post-grid">
-    {%- for post in site.posts -%}
-      <div class="post-card">
-        <a href="{{ post.url | relative_url }}" class="post-card-link">
-          <div class="post-card-image">
-            {%- assign has_image = false -%}
-            {%- assign img_src = "" -%}
-
-            {%- if post.preview_image -%}
-              {%- assign img_src = post.preview_image -%}
-              {%- assign has_image = true -%}
-            {%- else -%}
-              {%- assign first_image_in_content = post.content | match: /!\[.*?\]\((.*?)\)/ | first -%}
-              {%- if first_image_in_content -%}
-                {%- assign img_src = first_image_in_content -%}
-                {%- assign has_image = true -%}
-              {%- endif -%}
-            {%- endif -%}
-
-            {%- if has_image -%}
-              <img src="{{ post.url | relative_url | remove_last: '.html' }}/{{ img_src }}" alt="{{ post.title | escape }} preview">
-            {%- else -%}
-              <div class="post-card-icon">
-                {%- assign icons = site.data.site-metadata.theme.tech_icons -%}
-                {%- assign randomIndex = forloop.index0 | modulo: icons.size -%}
-                {{ icons[randomIndex] }}
-              </div>
-            {%- endif -%}
-          </div>
-          <div class="post-card-content">
-            <h3 class="post-card-title">{{ post.title | escape }}</h3>
-            <div class="post-card-meta">
-              {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-              <time datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: date_format }}
-              </time>
-            </div>
-            <div class="post-card-excerpt">
-              {%- assign excerpt_text = post.excerpt | default: post.content -%}
-              {{ excerpt_text | markdownify | strip_html | truncatewords: 25 }}
-            </div>
-          </div>
-        </a>
-      </div>
-    {%- endfor -%}
-  </div>
+  <h2>Latest posts</h2>
+  <ul class="post-list">
+  {%- for post in site.posts -%}
+    <li>
+      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+      - <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </li>
+  {%- endfor -%}
+  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 </div>
