@@ -11,9 +11,15 @@ author:
 url: "https://javi-jimenez.github.io"
 baseurl: ""
 
-  #remote_theme: cotes2020/jekyll-theme-chirpy
-  #plugins:
-  #  - jekyll-remote-theme
+# Use the Chirpy theme via the remote_theme plugin (recommended for GitHub Pages)
+remote_theme: cotes2020/jekyll-theme-chirpy
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-postfiles
+  - jekyll-paginate
 
 github:
   username: javi-jimenez # change to your github username
