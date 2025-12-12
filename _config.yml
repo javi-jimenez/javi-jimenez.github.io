@@ -11,8 +11,8 @@ author:
 url: "https://javi-jimenez.github.io"
 baseurl: ""
 
-# Use the Chirpy theme via the remote_theme plugin (recommended for GitHub Pages)
-theme: jekyll-theme-chirpy
+# Use the Chirpy theme via `remote_theme` (recommended for GitHub Pages)
+remote_theme: cotes2020/jekyll-theme-chirpy
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
