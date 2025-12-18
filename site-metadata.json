@@ -1,0 +1,44 @@
+{
+  "site": {
+    {
+    "siteTitle": "Codebase Europa",
+    "siteSubtitle": "A Technical Blog for Modern Developers",
+    "description": "Blog sobre tecnología, programación y desarrollo web",
+    "url": "https://tudominio.com",
+    "language": "es",
+    "author": {
+      "name": "Francisco Javier Jiménez Gómez",
+      "email": "ximenez.francisco@jimenezgomez.net",
+      "website": "https://jimenezgomez.net",
+      "social": {
+        "twitter": "@Lubok9",
+        "github": "javi-jimenez",
+        "linkedin": "ximenezfrancisco"
+      }
+    },
+    "sponsors": [
+      {
+        "name": "Patrocinador 1",
+        "url": "https://patrocinador1.com",
+        "logo": "/assets/images/sponsors/patrocinador1.png"
+      },
+      {
+        "name": "Patrocinador 2", 
+        "url": "https://patrocinador2.com",
+        "logo": "/assets/images/sponsors/patrocinador2.png"
+      }
+    ],
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Brisecom",
+      "url": "https://brisecom.net",
+      "logo": "https://brisecom.net/assets/images/logo.png",
+      "sameAs": [
+        "https://twitter.com/brisecom",
+        "https://github.com/brisecom"
+      ]
+    }
+  }
+}
+

@@ -1,136 +1,53 @@
-# Javi Jiménez Personal Blog
+# Sitio Web de Posts Estático
 
-A Jekyll-powered blog using the Chirpy theme, customized with a "Stellar" subtheme and hosted on GitHub Pages.
+Un sitio web estático elegante para mostrar posts, inspirado en el repositorio de javi-jimenez/posts.
 
-## Features
+## Características
 
-- **Jekyll Static Site Generator** - Built for GitHub Pages
-- **Responsive Design** - Beautiful on all devices
-- **Dark Theme** - Modern space-inspired color scheme
-- **Markdown Posts** - Easy to write and maintain
-- **SEO Optimized** - Built-in Jekyll SEO tag support
-- **Automated Deployment** - GitHub Actions workflow included
+- Diseño moderno y responsive
+- Grid de posts adaptable
+- Sistema de categorías y etiquetas
+- Efectos de hover en tarjetas
+- Código optimizado y semántico
 
-## Quick Start
+## Estructura
 
-### Local Development
+- `index.html` - Página principal
+- `posts/` - Directorio para posts individuales (futura expansión)
 
-1. **Install Ruby** (3.2+ recommended)
-   - macOS: `brew install ruby`
-   - Ubuntu: `sudo apt-get install ruby-full`
-   - Windows: Download from [ruby-lang.org](https://www.ruby-lang.org)
+## Cómo usar
 
-2. **Install dependencies**
-   ```bash
-   bundle install
-   ```
+1. Descarga todos los archivos
+2. Abre `index.html` en tu navegador
+3. Personaliza el contenido según tus necesidades
 
-3. **Serve locally**
-   ```bash
-   bundle exec jekyll serve
-   ```
-   Site will be available at `http://localhost:4000`
+## Personalización
 
-### Creating Posts
+Puedes modificar fácilmente:
+- Colores cambiando las variables CSS en `:root`
+- Contenido editando el HTML
+- Estilos en la sección `<style>`
 
-Posts go in the `_posts/` directory with the format: `YYYY-MM-DD-title.md`
+## Pasos
 
-Example post structure:
-```markdown
----
-layout: post
-title: "My First Post"
-date: 2025-12-08 10:30:00 +0100
-author: "Your Name"
-excerpt: "A brief description of your post"
----
+Create a complete single-page application (SPA) that loads and displays posts dynamically.
+There will be only one file called index.html with all resources self-contained.
 
-Your content here...
-```
+generate an index.html for a technical web site blog.
+it read posts list in the main page.
+the posts are in markdown format
+on click on one listed post, post is showed as generated html from the markdown.
+make a single page for all.
 
-### Configuration
-
-Most configuration is done in `_config.yml`. For theme-specific options like navigation and social links, refer to the Chirpy theme documentation.
-
-## Directory Structure
-
-```
-.
-├── _posts/              # Blog posts
-├── _layouts/            # Page templates
-├── assets/css/          # Stylesheets
-├── _config.yml          # Jekyll configuration
-├── Gemfile              # Ruby dependencies
-├── index.md             # Homepage
-└── README.md            # This file
-```
-
-## Deployment
-
-The site automatically deploys to GitHub Pages when you push to the `main` branch. The GitHub Actions workflow (`.github/workflows/jekyll.yml`) handles the build and deployment.
-
-### Manual Deployment Steps
-
-1. Push changes to the `main` branch:
-   ```bash
-   git add .
-   git commit -m "Update content"
-   git push origin main
-   ```
-
-2. GitHub Actions will automatically:
-   - Build the Jekyll site
-   - Generate static HTML
-   - Deploy to GitHub Pages
-
-Your site will be live at: `https://javi-jimenez.github.io`
-
-## Customization
-
-### Styling
-
-Main styles are in `assets/css/style.css`. Key CSS variables:
-
-```css
---color-primary: #8cc6ff      /* Blue */
---color-secondary: #ffb087    /* Orange */
---color-text: #f0f0f0         /* Light text */
---color-background: #15152a   /* Dark blue background */
-```
-
-### Layouts
-
-- `_layouts/default.html` - Base layout with header/footer
-- `_layouts/home.html` - Homepage with post list
-- `_layouts/post.html` - Individual post pages
-
-## Troubleshooting
-
-### Build fails locally
-
-```bash
-# Update gems
-bundle update
-
-# Clear cache
-rm -rf .jekyll-cache/
-rm -rf _site/
-
-# Try again
-bundle exec jekyll serve
-```
-
-### Posts not showing up
-
-- Ensure filename format: `YYYY-MM-DD-title.md`
-- Check post has YAML front matter (between `---`)
-- Verify date is not in the future
-- Rebuild site with `bundle exec jekyll build`
-
-## License
-
-MIT License - Feel free to use this template for your own blog!
-
+posts are inside the posts/ directory.
+the date preces the post directory name.
+posts are named as index.md inside each post directory.
+inside the post directory, there is an index.md file.
+index.md is the file that has to be rendered as the markdown post.
+posts directory name format for the date is: YYYY-MM-DD or YYYY-MM-DD-HH-MM-SS or any variant.
+the directory format can not include the HH-MM-SS or any of them.
+inside the post directory, posts are named as index.md.
+posts have a frontmatter that you do not have to show directly.
 there is no manual post listing.
 posts listing must be dynamic, allowing to add or remove posts and they are detected.
 
