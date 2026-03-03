@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-label="Codebase Europa banner">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#071426"/>
+      <stop offset="50%" stop-color="#172540"/>
+      <stop offset="100%" stop-color="#0b1a2b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- faint starfield -->
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="120" cy="60" r="1.8"/>
+    <circle cx="280" cy="40" r="1.2"/>
+    <circle cx="400" cy="120" r="2.4"/>
+    <circle cx="760" cy="86" r="1.6"/>
+    <circle cx="980" cy="50" r="1.0"/>
+    <circle cx="1320" cy="90" r="2.0"/>
+    <circle cx="1500" cy="30" r="1.2"/>
+  </g>
+
+  <!-- Pleiades motif (cluster) -->
+  <g transform="translate(420,80)" fill="#aee8ff" opacity="0.14">
+    <circle cx="0" cy="0" r="18"/>
+    <circle cx="36" cy="-8" r="12"/>
+    <circle cx="68" cy="14" r="10"/>
+    <circle cx="22" cy="36" r="8"/>
+    <circle cx="-18" cy="22" r="9"/>
+  </g>
+
+  <!-- Title and subtitle -->
+  <text x="60" y="140" font-family="Space Mono, monospace" font-size="72" fill="#bfe9ff">Codebase Europa</text>
+  <text x="60" y="190" font-family="Roboto, sans-serif" font-size="22" fill="#9fc8de">From the stars of Andromeda to the digital core of Spain and Europe.</text>
+
+  <!-- subtle Andromeda arc -->
+  <path d="M1200 300 C1100 140, 800 120, 600 260" fill="none" stroke="#8cc6ff" stroke-width="4" opacity="0.08" stroke-linecap="round"/>
+</svg>
