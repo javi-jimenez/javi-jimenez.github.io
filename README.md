@@ -1,4 +1,4 @@
-![Codebase Europa logo](assets/images/logo.svg)
+![Codebase Europa logo](assets/images/logo-ssg.svg)
 
 > Note: This project demonstrates how to convert a static-site-generator (SSG) workflow into a single `index.html` file — no compilation or build step required.  
 > Nota: Este proyecto muestra cómo convertir un flujo SSG en un único `index.html` sin paso de compilación.
