@@ -1,76 +1,63 @@
-# Sitio Web de Posts Estático
-
-Un sitio web estático elegante para mostrar posts, inspirado en el repositorio de javi-jimenez/posts.
-
-## Características
-
-- Diseño moderno y responsive
-- Grid de posts adaptable
-- Sistema de categorías y etiquetas
-- Efectos de hover en tarjetas
-- Código optimizado y semántico
-
-## Estructura
-
-- `index.html` - Página principal
-- `posts/` - Directorio para posts individuales (futura expansión)
-
-## Cómo usar
-
-1. Descarga todos los archivos
-2. Abre `index.html` en tu navegador
-3. Personaliza el contenido según tus necesidades
-
-## Personalización
-
-Puedes modificar fácilmente:
-- Colores cambiando las variables CSS en `:root`
-- Contenido editando el HTML
-- Estilos en la sección `<style>`
-
-## Pasos
-
-Create a complete single-page application (SPA) that loads and displays posts dynamically.
-There will be only one file called index.html with all resources self-contained.
-
 generate an index.html for a technical web site blog.
-it read posts list in the main page.
-the posts are in markdown format
-on click on one listed post, post is showed as generated html from the markdown.
-make a single page for all.
+# Static Posts Website
 
-posts are inside the posts/ directory.
-the date preces the post directory name.
-posts are named as index.md inside each post directory.
-inside the post directory, there is an index.md file.
-index.md is the file that has to be rendered as the markdown post.
-posts directory name format for the date is: YYYY-MM-DD or YYYY-MM-DD-HH-MM-SS or any variant.
-the directory format can not include the HH-MM-SS or any of them.
-inside the post directory, posts are named as index.md.
-posts have a frontmatter that you do not have to show directly.
-there is no manual post listing.
-posts listing must be dynamic, allowing to add or remove posts and they are detected.
+An elegant static website for publishing posts, inspired by the javi-jimenez/posts repository.
 
-images are in the same directory as the posts.
-the images link in the post is relative to the place where the file index.md is.
+## Features
 
-show posts in a grid in the main page.
-the main page have to have a top frame with images from pleiades and andromeda.
-the background is lightly referring stars.
+- Modern, responsive design
+- Adaptive posts grid
+- Category and tag support (structure prepared)
+- Hover effects on post cards
+- Optimized, semantic code
 
-handle cases where href is not a string.
-add date validation and fallback formatting
+## Structure
 
-in the post image preview, show as image the first image found in the post, if there are no images, show a random tech icon or emoji.
-if it is defined an image in the frontmatter as image preview for the post use it.
+- `index.html` - Main entry page and single-file application
+- `posts/` - Directory that contains individual post folders
 
-parse markdown before showing the post preview in the main page.
-Show only parsed text in the post text preview field in the main page.
+## How to use
 
-do your own test before delivering the release to me.
+1. Clone or download the repository to your local machine.
+2. Serve the project directory or open `index.html` in a browser (HTTP recommended).
+3. Customize content and styles to suit your needs.
 
-hardcoded parameters, must go in variables. See what is hardcoded and put it in parameters.
+## Customization
 
-The theme for the blog is: andromeda, pleyades, Spain, and Europe.
+You can easily modify:
+- Colors by changing the CSS variables under `:root`.
+- Content by editing the HTML/Markdown files.
+- Styling within the embedded `<style>` section of `index.html`.
 
-Fetch the metadata from site-metadata.json.
+## Implementation Details
+
+This project implements a single-page application (SPA) contained primarily in `index.html`. The application dynamically loads and renders posts written in Markdown and provides both a home view (posts grid) and a post detail view.
+
+- The application reads the post index from `posts/post_list.json` and then loads each post's Markdown file to build previews.
+- All posts are stored under the `posts/` directory. Each post resides in its own folder whose name begins with a date prefix (for example, `YYYY-MM-DD` or `YYYY-MM-DD-HH-MM-SS`), and the post content file is named `index.md` inside that folder.
+- Each `index.md` may contain a simple frontmatter block delimited by `---`. The frontmatter is parsed for keys such as `title`, `author`, and `image` (the parser expects simple `key: value` lines).
+- The post listing is dynamic: adding or removing post folders and updating `posts/post_list.json` will change what the site displays without modifying code.
+
+Image handling and previews:
+
+- Images referenced inside a post are resolved relative to that post's directory; absolute URLs and root-anchored paths are respected as-is.
+- The post preview image is selected in this order: frontmatter `image` (if provided), the first image found in the Markdown content, or a fallback random emoji/tech icon when no image exists.
+
+Rendering and behavior:
+
+- Markdown is parsed to HTML (using a Markdown parser) and sanitized before insertion into the DOM.
+- The main page shows parsed text previews for each post; preview text is generated by stripping HTML and truncating to a configurable length.
+- On click, a post is rendered in-place as the generated HTML from its Markdown source; navigation is handled client-side via a hash-based router.
+
+Robustness and validation:
+
+- The application handles non-string `href` values safely and sanitizes link/image attributes.
+- Date strings are validated and a fallback format is used if validation fails.
+- Configuration values and hardcoded parameters are exposed as variables (a `CONFIG` object) to make them easy to override.
+
+Additional notes and requirements:
+
+- The site header uses imagery referencing the Pleiades and Andromeda for stylistic theming; the overall theme references Andromeda, Pleiades, Spain, and Europe.
+- The app fetches optional site metadata from `site-metadata.json` to override default title, author, and preview configuration.
+- Run local tests (serve via HTTP and verify load of `posts/post_list.json` and individual `posts/<slug>/index.md`) before delivering a release.
+
