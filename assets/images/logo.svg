@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Codebase Europa logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Codebase Europa logo and SSG to single-file concept">
   <defs>
     <radialGradient id="g" cx="30%" cy="25%" r="80%">
       <stop offset="0%" stop-color="#b3e6ff"/>
@@ -14,23 +14,40 @@
 
   <rect width="100%" height="100%" rx="48" fill="url(#g)" />
 
-  <!-- stylized stars / Pleiades cluster -->
-  <g fill="#fff9" transform="translate(48,56)">
-    <circle cx="60" cy="30" r="6"/>
-    <circle cx="120" cy="18" r="4"/>
-    <circle cx="90" cy="60" r="5"/>
-    <circle cx="150" cy="56" r="3"/>
-    <circle cx="40" cy="72" r="3.5"/>
+  <!-- Pleiades cluster (left) -->
+  <g fill="#ffffff" transform="translate(44,84)" opacity="0.95">
+    <circle cx="40" cy="28" r="6"/>
+    <circle cx="88" cy="18" r="4"/>
+    <circle cx="64" cy="56" r="5"/>
+    <circle cx="120" cy="62" r="3"/>
+    <circle cx="18" cy="72" r="3.5"/>
   </g>
 
-  <!-- Andromeda swoosh -->
-  <path d="M42 380 C160 260, 352 260, 470 380" fill="none" stroke="#bfe9ff" stroke-width="12" stroke-linecap="round" opacity="0.12"/>
+  <!-- stylized multiple files (SSG output) -->
+  <g transform="translate(160,120)">
+    <rect x="0" y="0" width="64" height="44" rx="4" fill="#122233" stroke="#9fc8de" stroke-width="1" opacity="0.95"/>
+    <rect x="12" y="12" width="64" height="44" rx="4" fill="#122233" stroke="#9fc8de" stroke-width="1" opacity="0.75"/>
+    <rect x="24" y="24" width="64" height="44" rx="4" fill="#122233" stroke="#9fc8de" stroke-width="1" opacity="0.55"/>
+  </g>
 
-  <!-- Text CE -->
-  <g transform="translate(140,150) scale(2)">
-    <text x="0" y="60" font-family="Space Mono, monospace" font-weight="700" font-size="56" fill="#fff" filter="url(#glow)">CE</text>
+  <!-- arrow indicating transformation -->
+  <g stroke="#bfe9ff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.95">
+    <path d="M260 180 L340 220" />
+    <path d="M260 200 L340 240" />
+  </g>
+
+  <!-- single index.html file representation (right) -->
+  <g transform="translate(356,140)">
+    <rect x="0" y="0" width="120" height="84" rx="6" fill="#0e1a2b" stroke="#bfe9ff" stroke-width="2"/>
+    <text x="60" y="48" font-family="Space Mono, monospace" font-size="20" fill="#bfe9ff" text-anchor="middle">index.html</text>
+  </g>
+
+  <!-- CE text / brand -->
+  <g transform="translate(120,320)">
+    <text x="0" y="0" font-family="Space Mono, monospace" font-weight="700" font-size="72" fill="#ffffff" filter="url(#glow)">CE</text>
   </g>
 
   <!-- small tagline -->
-  <text x="50%" y="92%" font-family="Roboto, sans-serif" font-size="20" fill="#e6f7ff" text-anchor="middle">Codebase Europa</text>
+  <text x="50%" y="96%" font-family="Roboto, sans-serif" font-size="18" fill="#e6f7ff" text-anchor="middle">Codebase Europa</text>
+
 </svg>
