@@ -1,4 +1,4 @@
-![Codebase Europa logo](assets/images/logo-ssg.svg)
+![Codebase Europa banner](assets/images/banner-readme.svg)
 
 > Note: This project demonstrates how to convert a static-site-generator (SSG) workflow into a single `index.html` file — no compilation or build step required.  
 > Nota: Este proyecto muestra cómo convertir un flujo SSG en un único `index.html` sin paso de compilación.
@@ -60,9 +60,14 @@ Robustness and validation ✅:
 - Configuration values and hardcoded parameters are exposed as variables (a `CONFIG` object) to make them easy to override.
 
 
+
 Additional notes and requirements 📝:
 
 - The site header uses imagery referencing the Pleiades and Andromeda for stylistic theming; the overall theme references Andromeda, Pleiades, Spain, and Europe.
 - The app fetches optional site metadata from `site-metadata.json` to override default title, author, and preview configuration.
 - Run local tests (serve via HTTP and verify load of `posts/post_list.json` and individual `posts/<slug>/index.md`) before delivering a release.
+
+Site logo and favicon:
+
+- The repository includes a yellow notebook site logo and favicon under `assets/images/notebook-logo.svg` and `assets/images/favicons/notebook-favicon.svg` respectively. Use those assets for site branding and favicons.
 

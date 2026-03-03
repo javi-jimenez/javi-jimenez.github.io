@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" role="img" aria-label="Yellow notebook logo">
+  <rect x="0" y="0" width="420" height="120" rx="10" fill="none"/>
+
+  <!-- notebook icon -->
+  <g transform="translate(12,12)">
+    <rect x="0" y="0" width="96" height="96" rx="6" fill="#ffd86b" stroke="#e6b844" stroke-width="2"/>
+    <!-- spiral -->
+    <rect x="8" y="10" width="6" height="76" rx="3" fill="#b8861f"/>
+    <rect x="26" y="10" width="6" height="76" rx="3" fill="#b8861f"/>
+    <rect x="44" y="10" width="6" height="76" rx="3" fill="#b8861f"/>
+  </g>
+
+  <!-- text -->
+  <text x="132" y="66" font-family="Space Mono, monospace" font-size="36" fill="#0b2233">Codebase Europa</text>
+  <text x="132" y="92" font-family="Roboto, sans-serif" font-size="12" fill="#9fc8de">SSG → single-file index.html (no build)</text>
+</svg>

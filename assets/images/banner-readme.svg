@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="300" viewBox="0 0 1400 300" role="img" aria-label="Codebase Europa README banner">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#071426"/>
+      <stop offset="60%" stop-color="#12263a"/>
+      <stop offset="100%" stop-color="#081422"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)" rx="12"/>
+
+  <!-- faint stars -->
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="80" cy="40" r="1.8"/>
+    <circle cx="220" cy="20" r="1.2"/>
+    <circle cx="360" cy="120" r="2.4"/>
+    <circle cx="620" cy="86" r="1.6"/>
+    <circle cx="860" cy="50" r="1.0"/>
+    <circle cx="1180" cy="90" r="2.0"/>
+  </g>
+
+  <!-- Pleiades motif -->
+  <g transform="translate(120,70)" fill="#9fdcff" opacity="0.12">
+    <circle cx="0" cy="0" r="18"/>
+    <circle cx="36" cy="-8" r="12"/>
+    <circle cx="68" cy="14" r="10"/>
+    <circle cx="22" cy="36" r="8"/>
+    <circle cx="-18" cy="22" r="9"/>
+  </g>
+
+  <!-- Title -->
+  <text x="260" y="120" font-family="Space Mono, monospace" font-size="56" fill="#bfe9ff">Codebase Europa</text>
+  <text x="260" y="165" font-family="Roboto, sans-serif" font-size="20" fill="#9fc8de">SSG → single-file `index.html` — no build step required</text>
+
+  <!-- visual SSG -> index.html -->
+  <g transform="translate(40,160)">
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="72" height="48" rx="4" fill="#ffd" stroke="#d9b24a" stroke-width="2"/>
+      <rect x="14" y="12" width="72" height="48" rx="4" fill="#ffd" stroke="#d9b24a" stroke-width="2" opacity="0.85"/>
+      <rect x="28" y="24" width="72" height="48" rx="4" fill="#ffd" stroke="#d9b24a" stroke-width="2" opacity="0.7"/>
+    </g>
+    <path d="M220 20 L320 44" stroke="#bfe9ff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9"/>
+    <g transform="translate(340,0)">
+      <rect x="0" y="0" width="160" height="96" rx="8" fill="#0b1a2b" stroke="#7fbfff" stroke-width="2"/>
+      <text x="80" y="56" font-family="Space Mono, monospace" font-size="18" fill="#bfe9ff" text-anchor="middle">index.html</text>
+    </g>
+  </g>
+
+</svg>
